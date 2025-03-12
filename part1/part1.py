@@ -86,7 +86,7 @@ for idx, file_hash in enumerate(hashes, start=1):
     ])
     time.sleep(15)  # Respect rate limits for VirusTotal API
 
-with open('output_info.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('output_info.csv', 'w', newline='', encoding='utf-8-sig') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerows(output_data)
 

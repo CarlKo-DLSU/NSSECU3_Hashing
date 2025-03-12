@@ -3,7 +3,7 @@ import requests
 import time
 import hashlib
 
-API_KEY = '90cb56edd967a469143dd98125d60ffec1e8fbddfbe433db273f2e4ee46b20e6'  # Replace with your VirusTotal API Key
+API_KEY = '37a730fc1e0072f89f0a0b05c65512da39832d23e38aafbc6ea67b73e0180b99'  # Replace with your VirusTotal API Key
 API_URL = 'https://www.virustotal.com/api/v3/files/'
 
 headers = {
@@ -53,7 +53,7 @@ def format_date(timestamp):
         return time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(timestamp))
     return 'N/A'
 
-with open('part3.csv', newline='') as csvfile:
+with open('part4.2.csv', newline='') as csvfile:
     reader = csv.reader(csvfile)
     hashes = [row[0] for row in reader if row]
 
@@ -86,8 +86,8 @@ for idx, file_hash in enumerate(hashes, start=1):
     ])
     time.sleep(15)  # Respect rate limits for VirusTotal API
 
-with open('out3.csv', 'w', newline='', encoding='utf-8-sig') as csvfile:
+with open('out4.2.csv', 'w', newline='', encoding='utf-8-sig') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerows(output_data)
 
-print("Data collection complete. Output written to 'out3.csv'.")
+print("Data collection complete. Output written to 'out4.2.csv'.")

@@ -3,7 +3,7 @@ import requests
 import time
 import hashlib
 
-API_KEY = '15a5bcfdf0b9b41b941ea393a06fd23d0e783e7d8e551728670de93b86a15f04'  # Replace with your VirusTotal API Key
+API_KEY = ''  # Replace with your VirusTotal API Key
 API_URL = 'https://www.virustotal.com/api/v3/files/'
 
 headers = {

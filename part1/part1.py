@@ -53,7 +53,7 @@ def format_date(timestamp):
         return time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(timestamp))
     return 'N/A'
 
-with open('part1.csv', newline='') as csvfile:
+with open('part1.csv', newline='') as csvfile:   #input name of input file
     reader = csv.reader(csvfile)
     hashes = [row[0] for row in reader if row]
 
@@ -86,8 +86,8 @@ for idx, file_hash in enumerate(hashes, start=1):
     ])
     time.sleep(15)  # Respect rate limits for VirusTotal API
 
-with open('output_info.csv', 'w', newline='', encoding='utf-8-sig') as csvfile:
+with open('out1.csv', 'w', newline='', encoding='utf-8-sig') as csvfile:    #input name of output file
     writer = csv.writer(csvfile)
     writer.writerows(output_data)
 
-print("Data collection complete. Output written to 'out1.csv'.")
+print("Data collection complete. Output written to 'out1.csv'.")    #input name of output file
